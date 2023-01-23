@@ -1,6 +1,6 @@
 function loadDictionary() {
-  let biographies = {
-    bio1: {
+  let biographies = [
+    {
       name: "Marielle Franco",
       image: "https://i.postimg.cc/8fS8KSGX/marielle-franco.png",
       description:
@@ -8,7 +8,7 @@ function loadDictionary() {
       quote:
         "Quantos mais vão precisar morrer para que essa guerra aos pobres acabe.",
     },
-    bio2: {
+    {
       name: "Lélia Gonzales",
       image: "https://i.postimg.cc/2q1f3GTG/lelia-gonzalez.png",
       description:
@@ -16,7 +16,7 @@ function loadDictionary() {
       quote:
         "A gente não nasce negro, a gente se torna negro. É uma conquista dura, cruel e que se desenvolve pela vida da gente afora.",
     },
-    bio3: {
+    {
       name: "Angela Davis",
       image: "https://i.postimg.cc/nhqh7Lcc/angela-davis.png",
       description:
@@ -24,7 +24,7 @@ function loadDictionary() {
       quote:
         "Não aceito mais as coisas que não posso mudar, estou mudando as coisas que não posso aceitar.",
     },
-    bio4: {
+    {
       name: "Conceição Evaristo",
       image: "https://i.postimg.cc/Z9XzNNMS/conceicao-evaristo.png",
       description:
@@ -32,7 +32,7 @@ function loadDictionary() {
       quote:
         "O importante não é ser o primeiro ou primeira, o importante é abrir caminhos.",
     },
-    bio5: {
+    {
       name: "Carolina de Jesus",
       image:
         "https://i.postimg.cc/26FB7py2/carolina-maria-de-jesus-2-1200x900-2.jpg",
@@ -41,30 +41,48 @@ function loadDictionary() {
       quote:
         "Ah, comigo o mundo vai modificar-se. Não gosto do mundo como ele é.",
     },
-    bio6: {
+    {
       name: "Rosa Parks",
       image: "https://i.postimg.cc/K1q2Zw74/rosa-parks.png",
       description:
         "Rosa Louise McCauley, mais conhecida por Rosa Parks, foi uma costureira negra norte-americana. Símbolo do movimento dos direitos civis dos negros nos Estados Unidos, ficou famosa em 1º de dezembro de 1955 por ter se recusado frontalmente a ceder o seu lugar no ônibus a um branco, ato que se tornou o estopim do movimento que foi denominado boicote aos ônibus de Montgomery e posteriormente viria a marcar o início da luta antissegregacionista.",
       quote: "Você nunca deve ter medo do que está fazendo quando está certo.",
     },
+  ]
+
+  let content = document.getElementById("content")
+
+  // retorna o mesmo array modificado
+  // biographies.sort((a, b) => a.name.localeCompare(b.name))
+
+  // cria um funação que retorna um novo array ordenado
+  function orderArrayByName(array) {
+    const newArray = [...array] // desestructuring
+    return newArray.sort((a, b) => a.name.localeCompare(b.name))
   }
 
-  for (let bio in biographies) {
+  function orderArrayByKey(array, key) {
+    const newArray = [...array] // desestructuring
+    return newArray.sort((a, b) => a[key].localeCompare(b[key]))
+  }
+
+  const biographiesOrdered = orderArrayByKey(biographies, "name")
+
+  for (let item in biographiesOrdered) {
     content.innerHTML +=
       '<div class="card">' +
       '<img src="' +
-      biographies[bio].image +
+      biographiesOrdered[item].image +
       '" />' +
       "<details>" +
       "<summary>" +
-      biographies[bio].name +
+      biographiesOrdered[item].name +
       "</summary>" +
       "<p>" +
-      biographies[bio].description +
+      biographiesOrdered[item].description +
       "</p>" +
       "<blockquote> <q>" +
-      biographies[bio].quote +
+      biographiesOrdered[item].quote +
       "</blockquote> </q>" +
       "</details>" +
       "</div>"
