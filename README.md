@@ -1,5 +1,4 @@
-# Curso EuProgrAmo Front-End#2 [Turma 2] - Programaria
-
+# Curso EuProgrAmo Front-End#2 [Turma 2] - Programaria [DEMO](https://sabrinagomesb.github.io/programaria-frontend2/)
 ## 📖 Sobre
 
 Dividido em 8 MÓDULOS com o total de 78 aulas, o curso aborda os seguintes tópicos:
@@ -9,10 +8,8 @@ Dividido em 8 MÓDULOS com o total de 78 aulas, o curso aborda os seguintes tóp
 - [x] Aprofundando os conhecimentos em JavaScript;
 - [x] Dinamizando o código com JavaScript;
 - [x] Decolando o seu projeto (Git/GitHub).
-
  
  📌 Curso disponível no site [progra{m}aria](https://www.programaria.org/).
-
 
 ## 💡 Projeto
 
@@ -20,6 +17,7 @@ Dividido em 8 MÓDULOS com o total de 78 aulas, o curso aborda os seguintes tóp
  → Exibe imagens e descrição de mulheres que fizeram e ainda fazem parte da história do Brasil e do mundo.
 
  → Alterações realizadas no projeto final: alteração no estilo e ordenação por ordem alfabética utilizando JavaScript.
+
 
 <p align="left">
   <img src="./.github/Animação.gif" alt="Exibição de gif demonstrando o projeto final" width="100%">
