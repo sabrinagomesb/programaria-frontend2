@@ -55,7 +55,7 @@ function loadDictionary() {
   // retorna o mesmo array modificado
   // biographies.sort((a, b) => a.name.localeCompare(b.name))
 
-  // cria um funação que retorna um novo array ordenado
+  // cria uma função que retorna um novo array ordenado
   function orderArrayByName(array) {
     const newArray = [...array] // desestructuring
     return newArray.sort((a, b) => a.name.localeCompare(b.name))
@@ -90,4 +90,3 @@ function loadDictionary() {
 }
 
 loadDictionary()
-console.log(content)
